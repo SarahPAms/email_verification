@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {bindActionCreators} from 'redux'
-import {verifyEmail} from '../actions/checkEmailValidity'
+import { bindActionCreators } from 'redux'
+import { verifyEmail } from '../actions/checkEmailValidity'
 
 export class EmailInput extends React.Component {
   constructor(props) {
@@ -14,14 +14,14 @@ export class EmailInput extends React.Component {
   }
 
   onInputChange(event) {
-    this.setState({email: event.target.value})
+    this.setState({ email: event.target.value })
   }
 
   onEmailSubmit(event) {
     event.preventDefault();
 
     this.props.verifyEmail(this.state.email);
-    this.setState({email:''})
+    this.setState({ email:'' })
   }
 
   render() {
@@ -41,6 +41,6 @@ export class EmailInput extends React.Component {
 }
 
 function mapDispatchtoProps(dispatch){
-  return bindActionCreators ({verifyEmail}, dispatch);
+  return bindActionCreators ({ verifyEmail }, dispatch);
 }
 export default connect(null, mapDispatchtoProps)(EmailInput)
