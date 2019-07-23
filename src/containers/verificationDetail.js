@@ -6,13 +6,12 @@ class DetailVerification extends React.Component {
 
   render(){
     if (this.props.emailValidator === false) {
-      return <div>Nice try, but that's not a valid email address</div>
+      return <div> Nice try, but that's not a valid email address</div>
     } else if (this.props.emailValidator === true) {
       return <div>Send away! </div>
     } else {
       return null
     }
-    console.log(this.props.emailValidator)
   }
 }
 

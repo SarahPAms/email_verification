@@ -10,7 +10,7 @@ export function verifyEmail(email) {
       {
         'headers': {
         'X-RapidAPI-Host': HOST_URL,
-        'X-RapidAPI-Key': '34778c0d9cmsh497a2d0f5e0dd95p19578ajsnaa3ad20bdf58'
+        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY
       }
     })
     return {
